@@ -1,0 +1,114 @@
+diff --git a/AntiClassDump.cpp b/AntiClassDump.cpp
+index cf4e59c..cf83f89 100644
+--- a/AntiClassDump.cpp
++++ b/AntiClassDump.cpp
+@@ -771,3 +771,5 @@ PreservedAnalyses AntiClassDumpPass::run(Module &M, ModuleAnalysisManager& AM) {
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++static RegisterPass<AntiClassDump> X("acd", "Enable Anti-ClassDump.");
+\ No newline at end of file
+diff --git a/BogusControlFlow.cpp b/BogusControlFlow.cpp
+index 7fcbac7..ed124bb 100644
+--- a/BogusControlFlow.cpp
++++ b/BogusControlFlow.cpp
+@@ -852,3 +852,5 @@ PreservedAnalyses BogusControlFlowPass::run(Function& F, FunctionAnalysisManager
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++static RegisterPass<BogusControlFlow> X("bcfobf", "Enable BogusControlFlow.");
+\ No newline at end of file
+diff --git a/Flattening.cpp b/Flattening.cpp
+index 28678c0..066a52c 100644
+--- a/Flattening.cpp
++++ b/Flattening.cpp
+@@ -263,3 +263,6 @@ PreservedAnalyses FlatteningPass::run(Function& F, FunctionAnalysisManager& AM)
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++
++static RegisterPass<Flattening> X("cffobf", "Enable Control Flow Flattening.");
+\ No newline at end of file
+diff --git a/FunctionCallObfuscate.cpp b/FunctionCallObfuscate.cpp
+index 91bd1cc..b985ae1 100644
+--- a/FunctionCallObfuscate.cpp
++++ b/FunctionCallObfuscate.cpp
+@@ -345,3 +345,6 @@ PreservedAnalyses FunctionCallObfuscatePass::run(Module &M, ModuleAnalysisManage
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++
++static RegisterPass<FunctionCallObfuscate> X("fcoobf", "Enable Function CallSite Obfuscation.");
+\ No newline at end of file
+diff --git a/FunctionWrapper.cpp b/FunctionWrapper.cpp
+index 4afabdf..c50c00f 100644
+--- a/FunctionWrapper.cpp
++++ b/FunctionWrapper.cpp
+@@ -163,3 +163,5 @@ PreservedAnalyses FunctionWrapperPass::run(Module &M, ModuleAnalysisManager& AM)
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++static RegisterPass<FunctionWrapper> X("funcwra", "Enable FunctionWrapper.");
+\ No newline at end of file
+diff --git a/IndirectBranch.cpp b/IndirectBranch.cpp
+index e4f8fdc..f9ff17f 100644
+--- a/IndirectBranch.cpp
++++ b/IndirectBranch.cpp
+@@ -168,3 +168,6 @@ PreservedAnalyses IndirectBranchPass::run(Module &M, ModuleAnalysisManager& AM)
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++
++static RegisterPass<IndirectBranch> X("indibran", "IndirectBranching");
+diff --git a/Obfuscation.cpp b/Obfuscation.cpp
+index 2a433a3..6303e36 100644
+--- a/Obfuscation.cpp
++++ b/Obfuscation.cpp
+@@ -172,3 +172,6 @@ INITIALIZE_PASS_DEPENDENCY(SplitBasicBlock);
+ INITIALIZE_PASS_DEPENDENCY(StringEncryption);
+ INITIALIZE_PASS_DEPENDENCY(Substitution);
+ INITIALIZE_PASS_END(Obfuscation, "obfus", "Enable Obfuscation", true, true)
++
++
++static RegisterPass<Obfuscation> X("obfus", "Enable Obfuscation.");
+diff --git a/SplitBasicBlocks.cpp b/SplitBasicBlocks.cpp
+index fddf348..7d02f2a 100644
+--- a/SplitBasicBlocks.cpp
++++ b/SplitBasicBlocks.cpp
+@@ -150,3 +150,6 @@ PreservedAnalyses SplitBasicBlockPass::run(Function& F, FunctionAnalysisManager&
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++
++static RegisterPass<SplitBasicBlock> X("splitobf", "Enable BasicBlockSpliting.");
+\ No newline at end of file
+diff --git a/StringEncryption.cpp b/StringEncryption.cpp
+index f44f216..80e83ce 100644
+--- a/StringEncryption.cpp
++++ b/StringEncryption.cpp
+@@ -357,3 +357,6 @@ PreservedAnalyses StringEncryptionPass::run(Module &M, ModuleAnalysisManager& AM
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++
++static RegisterPass<StringEncryption> X("strcry", "Enable String Encryption");
+\ No newline at end of file
+diff --git a/Substitution.cpp b/Substitution.cpp
+index c6cee79..ace44a0 100644
+--- a/Substitution.cpp
++++ b/Substitution.cpp
+@@ -614,3 +614,5 @@ PreservedAnalyses SubstitutionPass::run(Function& F, FunctionAnalysisManager& AM
+   return PreservedAnalyses::all();
+ }
+ #endif
++
++static RegisterPass<Substitution> X("subobf", "Enable Instruction Substitution.");
+\ No newline at end of file

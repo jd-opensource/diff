@@ -1,0 +1,15 @@
+{start_data: 
+    {funargs: {
+            returunvalue: {pointo: "0"}, 
+            b: {pointo: {"0": "153", "1": {"0": "32767", "1": "0"}}}
+            }, 
+    globals: {mm: "188"}}, 
+    
+    end_data: {funargs: 
+                {returunvalue: {pointo: "153"}, 
+                
+                b: {pointo: {"0": "153", "1": {"0": "32767", "1": "0"}} }
+            }, 
+    
+    globals: {mm: "188"}, retvalue: "10"}
+}

@@ -1,0 +1,10 @@
+{
+    "llvm_home": "/home/reinforce_ndk_linux_llvm14",
+    "typeanalysis": "typeanalysis/target/parsers/libtypeanalysis.so",
+    "gdbscript": "loadedscript.py",
+    "reinforce":{
+       "plugin_path": "reinforce/target/Hikari/libHikari.so",
+       "policies": ["acd", "bcfobf", "cffobf", "fcoobf", "funcwra", "indibran", "obfus", "splitobf", "strcry", "subobf"]
+
+    }
+}

@@ -1,0 +1,25 @@
+[submodule "repos/Hikari"]
+	path = repos/Hikari
+	url = https://github.com/HikariObfuscator/Hikari.git
+[submodule "repos/SsagePass"]
+	path = repos/SsagePass
+	url = https://github.com/SsageParuders/SsagePass.git
+[submodule "repos/YANSOllvm"]
+	path = repos/YANSOllvm
+	url = https://github.com/emc2314/YANSOllvm.git
+[submodule "repos/Pluto"]
+	path = repos/Pluto
+	url = https://github.com/bluesadi/Pluto.git
+[submodule "repos/ExtractBB"]
+	path = repos/ExtractBB
+	url = https://github.com/shareef12/ExtractBB.git
+[submodule "repos/Core"]
+	path = repos/Core
+	url = https://github.com/xelzmm/Core.git
+[submodule "repos/Deniskore"]
+	path = repos/Deniskore
+	url = https://github.com/Deniskore/llvm.git
+[submodule "repos/llvm-pass-tutorial"]
+	path = repos/llvm-pass-tutorial
+	url = https://github.com/LeadroyaL/llvm-pass-tutorial.git
+

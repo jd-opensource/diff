@@ -1,0 +1,8 @@
+.vscode/*
+typeanalysis/target/*
+reinforce/target/*
+reinforce/Hikari/*
+*.ll
+*.s
+*.o
+*.out
